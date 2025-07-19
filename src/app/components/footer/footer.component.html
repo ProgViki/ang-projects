@@ -1,0 +1,38 @@
+<!-- components/footer/footer.component.html -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="assets/images/angular-logo.svg" alt="Angular Logo" height="30">
+      <span>Angular</span>
+    </div>
+    
+    <div class="footer-links">
+      <div class="link-group">
+        <h4>Resources</h4>
+        <a routerLink="/about">About</a>
+        <a routerLink="/learn">Documentation</a>
+        <a routerLink="/community">Community</a>
+      </div>
+      
+      <div class="link-group">
+        <h4>Help</h4>
+        <a href="https://stackoverflow.com/questions/tagged/angular" target="_blank">Stack Overflow</a>
+        <a href="https://github.com/angular/angular/issues" target="_blank">GitHub Issues</a>
+        <a href="https://angular.io/guide/releases" target="_blank">Release Notes</a>
+      </div>
+      
+      <div class="link-group">
+        <h4>Community</h4>
+        <div class="social-links">
+          <a *ngFor="let link of links" [href]="link.url" target="_blank" matTooltip="{{link.name}}">
+            <mat-icon>{{link.icon}}</mat-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-copyright">
+    <p>© {{currentYear}} Angular. All rights reserved.</p>
+  </div>
+</footer>

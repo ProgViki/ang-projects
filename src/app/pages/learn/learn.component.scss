@@ -1,0 +1,84 @@
+// pages/learn/learn.component.scss
+.learn-page {
+  .learn-hero {
+    background: linear-gradient(135deg, #3f51b5, #2196f3);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    
+    h1 {
+      font-size: 3rem;
+      margin: 0 0 10px;
+    }
+    
+    p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+  }
+  
+  .learning-paths {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    
+    h2 {
+      text-align: center;
+      color: #3f51b5;
+      margin-bottom: 30px;
+    }
+    
+    .path-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      
+      mat-card {
+        color: white;
+        
+        mat-icon {
+          color: white;
+        }
+      }
+    }
+  }
+  
+  .tutorials {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    
+    h2 {
+      text-align: center;
+      color: #3f51b5;
+      margin-bottom: 30px;
+    }
+  }
+  
+  .resources {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    
+    h2 {
+      text-align: center;
+      color: #3f51b5;
+      margin-bottom: 30px;
+    }
+    
+    .resource-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      
+      .resource-card {
+        mat-icon {
+          color: #3f51b5;
+          font-size: 40px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

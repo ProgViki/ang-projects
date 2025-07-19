@@ -1,0 +1,18 @@
+<!-- pages/documentation/documentation.component.html -->
+<app-header></app-header>
+
+<main class="documentation-page">
+  <div class="doc-container">
+    <app-documentation-nav 
+      [sections]="docSections" 
+      [currentSection]="currentDoc"
+      (sectionChange)="onSectionChange($event)">
+    </app-documentation-nav>
+
+    <div class="doc-content">
+      <app-documentation-viewer [docPath]="currentDoc"></app-documentation-viewer>
+    </div>
+  </div>
+</main>
+
+<app-footer></app-footer>

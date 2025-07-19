@@ -1,0 +1,24 @@
+<!-- pages/home/home.component.html -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>One framework. Mobile & desktop.</h1>
+    <p>Angular is a platform that makes it easy to build applications with the web.</p>
+    <button mat-raised-button color="accent" routerLink="/learn">Get Started</button>
+  </div>
+</section>
+
+<section class="features">
+  <h2>Why Angular?</h2>
+  <div class="feature-cards">
+    <mat-card *ngFor="let feature of features">
+      <mat-icon>{{feature.icon}}</mat-icon>
+      <mat-card-title>{{feature.title}}</mat-card-title>
+      <mat-card-content>{{feature.description}}</mat-card-content>
+    </mat-card>
+  </div>
+</section>
+
+<section class="quick-start">
+  <h2>Quick Start</h2>
+  <pre><code class="language-typescript">{{quickStartCode}}</code></pre>
+</section>

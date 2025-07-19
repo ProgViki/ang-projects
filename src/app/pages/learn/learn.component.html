@@ -1,0 +1,61 @@
+<!-- pages/learn/learn.component.html -->
+<app-header></app-header>
+
+<main class="learn-page">
+  <section class="learn-hero">
+    <h1>Learn Angular</h1>
+    <p>Comprehensive resources to master Angular development</p>
+  </section>
+
+  <section class="learning-paths">
+    <h2>Learning Paths</h2>
+    <div class="path-cards">
+      <mat-card *ngFor="let path of learningPaths" [class]="path.color">
+        <mat-card-header>
+          <mat-card-title>{{path.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item *ngFor="let item of path.items">
+              <mat-icon mat-list-icon>check_circle</mat-icon>
+              <div mat-line>{{item}}</div>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <section class="tutorials">
+    <h2>Step-by-Step Tutorials</h2>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let tutorial of ['Tour of Heroes', 'Forms Guide', 'HTTP Guide']">
+        <mat-expansion-panel-header>
+          <mat-panel-title>{{tutorial}}</mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-documentation [docPath]="tutorial.toLowerCase().replace(' ', '-')"></app-documentation>
+        <mat-action-row>
+          <button mat-button color="primary">Start Tutorial</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+
+  <section class="resources">
+    <h2>Additional Resources</h2>
+    <div class="resource-cards">
+      <mat-card *ngFor="let resource of resources" class="resource-card">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>{{resource.icon}}</mat-icon>
+          <mat-card-title>{{resource.title}}</mat-card-title>
+          <mat-card-subtitle>{{resource.description}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+          <a mat-button [href]="resource.link" target="_blank">Visit</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

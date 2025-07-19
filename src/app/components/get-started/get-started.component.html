@@ -1,0 +1,20 @@
+<!-- components/getting-started/getting-started.component.html -->
+<section class="getting-started">
+  <h2>Getting Started with Angular</h2>
+  
+  <div class="steps">
+    <div *ngFor="let step of steps; let i = index" class="step">
+      <div class="step-number">{{i + 1}}</div>
+      <div class="step-content">
+        <h3>{{step.title}}</h3>
+        <p>{{step.description}}</p>
+        <pre><code class="language-bash">{{step.code}}</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="cta">
+    <button mat-raised-button color="primary" routerLink="/learn">Learn More</button>
+    <a mat-stroked-button href="https://angular.io/start" target="_blank">Official Guide</a>
+  </div>
+</section>

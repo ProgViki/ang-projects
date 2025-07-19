@@ -1,0 +1,61 @@
+<!-- pages/about/about.component.html -->
+<app-header></app-header>
+
+<main class="about-page">
+  <section class="about-hero">
+    <h1>About Angular</h1>
+  </section>
+
+  <section class="about-content">
+    <div class="about-description">
+      <h2>What is Angular?</h2>
+      <p>{{aboutAngular.description}}</p>
+      
+      <div class="facts">
+        <mat-card *ngFor="let fact of aboutAngular | keyvalue" class="fact-card">
+          <mat-card-title>{{fact.key | titlecase}}</mat-card-title>
+          <mat-card-content>{{fact.value}}</mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <h2>Meet the Team</h2>
+    <div class="team-members">
+      <mat-card *ngFor="let member of teamMembers" class="team-card">
+        <img mat-card-image [src]="member.image" [alt]="member.name">
+        <mat-card-header>
+          <mat-card-title>{{member.name}}</mat-card-title>
+          <mat-card-subtitle>{{member.role}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{member.bio}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <section class="history-section">
+    <h2>Angular History</h2>
+    <mat-vertical-stepper>
+      <mat-step label="AngularJS (2010)">
+        The original AngularJS framework released by Google
+      </mat-step>
+      <mat-step label="Angular 2 (2016)">
+        Complete rewrite with TypeScript and component-based architecture
+      </mat-step>
+      <mat-step label="Angular 4 (2017)">
+        Version skip to align core versions
+      </mat-step>
+      <mat-step label="Angular 5+ (2017-2020)">
+        Regular updates with new features
+      </mat-step>
+      <mat-step label="Ivy (2020)">
+        New rendering engine for better performance
+      </mat-step>
+    </mat-vertical-stepper>
+  </section>
+</main>
+
+<app-footer></app-footer>

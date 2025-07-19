@@ -1,0 +1,80 @@
+// pages/about/about.component.scss
+.about-page {
+  .about-hero {
+    background: #3f51b5;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+  }
+  
+  .about-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    
+    .about-description {
+      max-width: 800px;
+      margin: 0 auto;
+      
+      h2 {
+        color: #3f51b5;
+      }
+    }
+    
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+      
+      .fact-card {
+        mat-card-title {
+          font-size: 18px;
+          color: #3f51b5;
+        }
+      }
+    }
+  }
+  
+  .team-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    
+    h2 {
+      text-align: center;
+      color: #3f51b5;
+      margin-bottom: 40px;
+    }
+    
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      
+      .team-card {
+        img {
+          height: 300px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  
+  .history-section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    
+    h2 {
+      text-align: center;
+      color: #3f51b5;
+      margin-bottom: 30px;
+    }
+  }
+}

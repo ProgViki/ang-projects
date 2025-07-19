@@ -1,0 +1,12 @@
+<!-- components/examples/example-viewer.component.html -->
+<div class="example-viewer">
+  <h3>{{title}}</h3>
+  
+  <div class="demo">
+    <ng-container *ngComponentOutlet="demo"></ng-container>
+  </div>
+  
+  <div class="code">
+    <pre><code class="language-typescript">{{code}}</code></pre>
+  </div>
+</div>
