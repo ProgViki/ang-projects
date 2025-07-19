@@ -16,10 +16,10 @@
         </mat-card-header>
         <mat-card-content>
           <mat-list>
-            <mat-list-item *ngFor="let item of path.items">
+            @for(let item of path.items) {<mat-list-item>
               <mat-icon mat-list-icon>check_circle</mat-icon>
               <div mat-line>{{item}}</div>
-            </mat-list-item>
+            </mat-list-item>}
           </mat-list>
         </mat-card-content>
       </mat-card>
@@ -29,22 +29,23 @@
   <section class="tutorials">
     <h2>Step-by-Step Tutorials</h2>
     <mat-accordion>
-      <mat-expansion-panel *ngFor="let tutorial of ['Tour of Heroes', 'Forms Guide', 'HTTP Guide']">
-        <mat-expansion-panel-header>
+      @for(let tutorial of ['Tour of Heroes', 'Forms Guide', 'HTTP Guide']) {
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
           <mat-panel-title>{{tutorial}}</mat-panel-title>
         </mat-expansion-panel-header>
         <app-documentation [docPath]="tutorial.toLowerCase().replace(' ', '-')"></app-documentation>
         <mat-action-row>
           <button mat-button color="primary">Start Tutorial</button>
         </mat-action-row>
-      </mat-expansion-panel>
+      </mat-expansion-panel>}
     </mat-accordion>
   </section>
 
   <section class="resources">
     <h2>Additional Resources</h2>
     <div class="resource-cards">
-      <mat-card *ngFor="let resource of resources" class="resource-card">
+      @for (let resource of resources) {<mat-card class="resource-card">
         <mat-card-header>
           <mat-icon mat-card-avatar>{{resource.icon}}</mat-icon>
           <mat-card-title>{{resource.title}}</mat-card-title>
@@ -53,7 +54,7 @@
         <mat-card-actions>
           <a mat-button [href]="resource.link" target="_blank">Visit</a>
         </mat-card-actions>
-      </mat-card>
+      </mat-card>}
     </div>
   </section>
 </main>

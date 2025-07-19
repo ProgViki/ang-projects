@@ -12,10 +12,12 @@
       <p>{{aboutAngular.description}}</p>
       
       <div class="facts">
-        <mat-card *ngFor="let fact of aboutAngular | keyvalue" class="fact-card">
+        @for(let fact of aboutAngular | keyvalue){
+          <mat-card class="fact-card">
           <mat-card-title>{{fact.key | titlecase}}</mat-card-title>
           <mat-card-content>{{fact.value}}</mat-card-content>
         </mat-card>
+      }
       </div>
     </div>
   </section>
@@ -23,7 +25,7 @@
   <section class="team-section">
     <h2>Meet the Team</h2>
     <div class="team-members">
-      <mat-card *ngFor="let member of teamMembers" class="team-card">
+      @for(let member of teamMembers) {<mat-card class="team-card">
         <img mat-card-image [src]="member.image" [alt]="member.name">
         <mat-card-header>
           <mat-card-title>{{member.name}}</mat-card-title>
@@ -32,7 +34,7 @@
         <mat-card-content>
           <p>{{member.bio}}</p>
         </mat-card-content>
-      </mat-card>
+      </mat-card>}
     </div>
   </section>
 

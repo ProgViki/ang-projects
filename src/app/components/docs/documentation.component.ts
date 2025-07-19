@@ -1,9 +1,12 @@
 // pages/documentation/documentation.component.ts
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-documentation',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './documentation.component.html',
   styleUrls: ['./documentation.component.scss']
 })

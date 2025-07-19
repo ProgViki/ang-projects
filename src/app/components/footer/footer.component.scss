@@ -1,0 +1,97 @@
+// components/footer/footer.component.scss
+
+.footer-container {
+  background-color: #3f51b5; // Angular's primary color
+  color: white;
+  padding: 2rem 0;
+  margin-top: auto;
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+
+    .footer-section {
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 50px;
+          height: 2px;
+          background: rgba(255,255,255,0.5);
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+          margin-bottom: 0.5rem;
+          
+          a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.2s ease;
+            
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          background: rgba(255,255,255,0.1);
+          border-radius: 50%;
+          transition: background-color 0.2s ease;
+          
+          &:hover {
+            background: rgba(255,255,255,0.2);
+          }
+          
+          mat-icon {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+}

@@ -10,7 +10,7 @@
   <section class="community-events">
     <h2>Upcoming Events</h2>
     <div class="event-cards">
-      <mat-card *ngFor="let event of events" class="event-card">
+      @for(event in events) {<mat-card class="event-card">
         <mat-card-header>
           <mat-card-title>{{event.name}}</mat-card-title>
           <mat-card-subtitle>{{event.date}} • {{event.location}}</mat-card-subtitle>
@@ -22,14 +22,15 @@
           <button mat-button>Learn More</button>
           <button mat-button color="primary">Register</button>
         </mat-card-actions>
-      </mat-card>
+      </mat-card>}
     </div>
   </section>
 
   <section class="community-forums">
     <h2>Community Forums</h2>
     <div class="forum-cards">
-      <mat-card *ngFor="let forum of forums" class="forum-card">
+      @for(let forum of forums){
+        <mat-card class="forum-card">
         <img mat-card-avatar [src]="forum.icon" [alt]="forum.name">
         <mat-card-header>
           <mat-card-title>{{forum.name}}</mat-card-title>
@@ -38,7 +39,7 @@
         <mat-card-actions>
           <a mat-button [href]="forum.link" target="_blank">Visit</a>
         </mat-card-actions>
-      </mat-card>
+      </mat-card>}
     </div>
   </section>
 

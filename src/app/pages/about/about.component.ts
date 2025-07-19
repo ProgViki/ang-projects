@@ -1,8 +1,21 @@
 // pages/about/about.component.ts
+import { CommonModule, TitleCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
-
+import { MatCardModule } from '@angular/material/card';
+import { MatStepperModule } from '@angular/material/stepper';
+import { HeaderComponent } from '../../components/header/header.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 @Component({
   selector: 'app-about',
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatStepperModule,
+    TitleCasePipe,
+    HeaderComponent,
+    FooterComponent
+  ],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })

@@ -10,11 +10,13 @@
 <section class="features">
   <h2>Why Angular?</h2>
   <div class="feature-cards">
-    <mat-card *ngFor="let feature of features">
+    @for(let feature of features){
+      <mat-card>
       <mat-icon>{{feature.icon}}</mat-icon>
       <mat-card-title>{{feature.title}}</mat-card-title>
       <mat-card-content>{{feature.description}}</mat-card-content>
     </mat-card>
+  }
   </div>
 </section>
 

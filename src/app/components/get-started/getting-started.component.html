@@ -3,7 +3,8 @@
   <h2>Getting Started with Angular</h2>
   
   <div class="steps">
-    <div *ngFor="let step of steps; let i = index" class="step">
+    @for(let step of steps; let i = index){
+      <div class="step">
       <div class="step-number">{{i + 1}}</div>
       <div class="step-content">
         <h3>{{step.title}}</h3>
@@ -11,6 +12,7 @@
         <pre><code class="language-bash">{{step.code}}</code></pre>
       </div>
     </div>
+  }
   </div>
   
   <div class="cta">
