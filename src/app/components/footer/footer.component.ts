@@ -1,21 +1,30 @@
-// components/footer/footer.component.ts
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, MatIconModule, MatTooltipModule],
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  template: `
+    <footer class="footer">
+      <div>© {{year}} GeoCater · Catering & Decorations</div>
+      <div class="links">
+        <a href="#">Terms</a> · <a href="#">Privacy</a> · <a href="#">Contact</a>
+      </div>
+    </footer>
+  `,
+  styles: [`
+    .footer {
+      margin-top: 48px;
+      padding: 28px 16px;
+      color: var(--text-on-dark);
+      background: #081423;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+    }
+    .links a { color: var(--emerald); }
+  `]
 })
 export class FooterComponent {
-  currentYear = new Date().getFullYear();
-  links = [
-    { name: 'GitHub', icon: 'code', url: 'https://github.com/angular/angular' },
-    { name: 'Twitter', icon: 'twitter', url: 'https://twitter.com/angular' },
-    { name: 'Blog', icon: 'rss_feed', url: 'https://blog.angular.io/' }
-  ];
+  year = new Date().getFullYear();
 }
